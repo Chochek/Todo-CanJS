@@ -20,10 +20,9 @@
 			</div>
 			<input class="edit" value="<%= todo.attr('text') %>">
 
-            <% var users = ["Anybody", "Marko", "Alex", "Brian", "Justin"]; %>
             <% var usersCheckbox = ["Marko", "Alex", "Brian", "Justin"]; %>
 
-            <ul class="user-list">
+            <div class="user-list">
 	            <% for(var i=0; i<usersCheckbox.length; i++) {
 	            	var assignedUserList = todo.attr('user').split(' ');
 	            	var userIsAssigned = false; %>
@@ -36,7 +35,7 @@
 		            	<input class="user" type="checkbox" value="<%= usersCheckbox[i] %>"><%= usersCheckbox[i] %> 
 		            <% } %>
 		        <% } %>
-			</ul>
+			</div>
 		</li>
 	<% }) %>
   </ul>
